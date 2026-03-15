@@ -1,0 +1,62 @@
+{
+  "andar 3 metros": {
+    "command": "move_distance",
+    "value": 3.0
+  },
+  "voltar 3 metros": {
+    "command": "move_distance",
+    "value": -3.0
+  },
+  "andar 5 metros": {
+    "command": "move_distance",
+    "value": 5.0
+  },
+  "girar 90 graus esquerda": {
+    "command": "turn_angle",
+    "value": 90.0
+  },
+  "girar 90 graus direita": {
+    "command": "turn_angle",
+    "value": -90.0
+  },
+  "girar 180 graus esquerda": {
+    "command": "turn_angle",
+    "value": 180.0
+  },
+  "girar 180 graus direita": {
+    "command": "turn_angle",
+    "value": -180.0
+  },
+  "arco v=0.25 w=0.6 d=3": {
+    "command": "arc",
+    "value": {
+      "v": 0.25,
+      "w": 0.6,
+      "duration": 3.0
+    }
+  },
+  "arco v=0.25 w=-0.6 d=3": {
+    "command": "arc",
+    "value": {
+      "v": 0.25,
+      "w": -0.6,
+      "duration": 3.0
+    }
+  },
+  "arco v=0.18 w=1.2 d=2": {
+    "command": "arc",
+    "value": {
+      "v": 0.18,
+      "w": 1.2,
+      "duration": 2.0
+    }
+  },
+  "arco v=0.18 w=-1.2 d=2": {
+    "command": "arc",
+    "value": {
+      "v": 0.18,
+      "w": -1.2,
+      "duration": 2.0
+    }
+  }
+}

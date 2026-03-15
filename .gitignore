@@ -1,0 +1,34 @@
+# ROS 2 / colcon
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# IDE / local tooling
+.vscode/
+.idea/
+**/.vscode/
+**/.idea/
+*.db
+
+# Local nested git backup
+src/p3at_control/.git_backup_nested_repo_20260314/
+
+# Generated experiment outputs
+src/p3at_control/optimizer/scenario_results/
+src/p3at_control/optimizer/moead/
+src/p3at_control/optimizer/pygad/
+
+# Local parser logs and temp artifacts
+/tmp/
+*.tmp
+*.swp
+
+# Webots hidden thumbnails / local files
+src/p3at_control/worlds/.pioneer3at*.jpg

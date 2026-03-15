@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+
+# ROS / Colcon
+build/
+install/
+log/
+
+# Otimização / dados gerados
+validation_*.json
+learning_curve.json
+best_genes.json
+*.png
+
+# Webots
+*.wbo
+*.wbproj
+
+# Editor
+.vscode/settings.json
+.idea/
+
+# Temporários
+*.tmp

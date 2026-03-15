@@ -1,0 +1,51 @@
+# ---------------------------------------------------------
+# FILE: params.yaml
+# Base unificada para SIMULAÇÃO e ROBÔ REAL
+# ---------------------------------------------------------
+
+executor:
+  ros__parameters:
+    # Proteção contra deadlock
+    linear_timeout_per_meter: 12.0
+    angular_timeout_per_90deg: 8.0
+
+    # Tolerâncias
+    linear_epsilon: 0.02
+    angular_epsilon_deg: 2.0
+    # Calibração empírica por offset observada no robô real
+    linear_target_bias_m: 0.09
+    angular_target_bias_deg: 8.2
+    # Aproximação suave perto do alvo
+    linear_slowdown_distance: 0.30
+    angular_slowdown_deg: 25.0
+    min_linear_approach_speed: 0.05
+    min_angular_approach_speed: 0.12
+    # Limites globais de velocidade para teste em real
+    max_linear: 0.2
+    max_angular: 0.5
+    # Exploratório (sem Brain)
+    dist_stop: 0.88
+    dist_avoid: 1.66
+    turn_force: 1.15
+    explore_speed: 0.50
+    tail_cooldown: 0.4
+    turn_duration: 0.7
+    scan_timeout: 0.7
+    lateral_avoid_factor: 1.25
+    lateral_turn_hold: 0.9
+    lateral_turn_cooldown: 1.2
+    lateral_block_time: 0.8
+
+p3at_real_driver:
+  ros__parameters:
+    # Rede do robô real
+    robot_ip: 192.168.0.1
+    robot_port: 20001
+    # Robustez de comunicação no real
+    cmd_timeout_s: 1.5
+    use_wheel_mix: true
+    axle_track_m: 0.42
+    connect_retries: 5
+    connect_retry_s: 1.0
+    battery_log_delta_v: 0.10
+    battery_log_delta_soc: 1.0

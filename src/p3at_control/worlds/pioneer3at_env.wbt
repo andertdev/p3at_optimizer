@@ -1,0 +1,145 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/SandyGround.proto"
+EXTERNPROTO "../protos/Pioneer3at.proto"
+
+WorldInfo {
+  info [
+    "Pioneer 3AT robot (Adept MobileRobots)."
+    "This all terrain four wheels drive robot is  equipped with a Sick LMS 291 lidar."
+    "It is programmed to perform a simple obstacle avoidance behavior based on the sensor data measured by the lidar."
+  ]
+  title "Pioneer 3AT"
+  lineScale 0.5
+}
+Viewpoint {
+  orientation 0.0008531595796647605 0.9999982821540944 -0.0016455417320657216 0.9533005526341631
+  position -55.24253329663061 12.121250764043033 76.19248979884021
+  follow "Pioneer 3-AT"
+  followSmoothness 0
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 20 30
+  floorTileSize 3 3
+  floorAppearance SandyGround {
+  }
+  wallThickness 0.4
+  wallHeight 0.8
+  wallAppearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/default/worlds/textures/gray_brick_wall.jpg"
+      ]
+    }
+    roughness 1
+    metalness 0
+    textureTransform TextureTransform {
+      scale 56 28
+    }
+  }
+}
+DEF OBSTACLE_1 Solid {
+  translation 5.8889 6.1957 1
+  children [
+    DEF OBSTACLE_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.898039 0.898039 0.898039
+        baseColorMap ImageTexture {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/default/worlds/textures/rock.jpg"
+          ]
+        }
+        roughness 1
+        metalness 0
+        textureTransform TextureTransform {
+          scale 1.5 1.5
+        }
+      }
+      geometry Cylinder {
+        radius 0.4
+        subdivision 20
+      }
+    }
+  ]
+  name "obstacle"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_2 Solid {
+  translation -5.02857 6.1695 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(2)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_3 Solid {
+  translation -0.0118 -9.4757 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(3)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_4 Solid {
+  translation -5.7092 -5.26843 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(4)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_5 Solid {
+  translation 5.1434 -4.20865 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(5)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_6 Solid {
+  translation 0.7044 9.9746 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(6)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_7 Solid {
+  translation 0.11869 0.5566 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(7)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF PIONEER_3AT Pioneer3at {
+  hidden position_0_0 540.6985889632697
+  hidden position_0_1 620.7058094678188
+  hidden position_0_2 541.9369420393452
+  hidden position_0_3 1240.8876016966983
+  hidden linearVelocity_0 1.793614972454207e-15 -2.1767696546785717e-15 1.5502750598402187e-16
+  hidden angularVelocity_0 -1.114861160675771e-15 -4.948158564863435e-16 -9.573083479444177e-16
+  hidden rotation_3 -0.278173502230696 0.2781674974045331 -0.9193706249627557 1.6547727010500588
+  hidden linearVelocity_3 -2.707924234787884e-15 5.563987526200743e-16 -7.103920936021607e-17
+  hidden angularVelocity_3 3.252046927726443e-15 6.151413519618727e-15 -6.168956380440385e-16
+  hidden rotation_4 -0.7045269225997184 0.7045199334128363 0.08540186623337359 3.311976427492813
+  hidden linearVelocity_4 -1.202127742228497e-14 2.2020335894234158e-15 7.105611896030819e-16
+  hidden angularVelocity_4 3.914567337938118e-15 3.274528816346914e-15 -2.3214268922820532e-15
+  hidden rotation_5 0.2977819910458162 -0.29777582571173805 0.9070035520495398 4.614925522869863
+  hidden linearVelocity_5 1.2195582892624216e-14 -1.914554335480118e-15 4.263123207005548e-16
+  hidden angularVelocity_5 4.126350933575399e-15 8.217552784553044e-15 -5.981204654834316e-16
+  hidden rotation_6 0.6906761716215187 -0.6906697645860916 -0.21434015545584395 2.719310618078644
+  hidden linearVelocity_6 4.343590582451169e-15 -2.7642135471513185e-15 1.4209895395799232e-16
+  hidden angularVelocity_6 1.05028200413189e-14 -1.8860150605880216e-15 -9.427459669670094e-16
+  translation 5.5410035224167515 1.664517885219408 -0.0023889310698361477
+  rotation -2.4659028683077183e-05 1.0150501098211612e-05 0.9999999996444497 2.3470199998793784
+  controller "p3at_webots_controller"
+  supervisor TRUE
+}
